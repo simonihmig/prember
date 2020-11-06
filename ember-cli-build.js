@@ -20,7 +20,7 @@ module.exports = function(defaults) {
   const appTree = maybeEmbroider(app);
 
   if ('@embroider/core' in app.dependencies()) {
-    return require('prember').prerender(app, appTree);
+    return require('./index').prerender(app, appTree);
   } else {
     return appTree;
   }
